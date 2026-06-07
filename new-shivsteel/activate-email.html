@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activate Contact Email</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-900 flex items-center justify-center p-4">
+  <main class="w-full max-w-lg bg-white border border-slate-200 rounded-2xl shadow-sm p-6 sm:p-8">
+    <h1 class="text-2xl font-black mb-2">Activate FormSubmit Email</h1>
+    <p class="text-slate-600 mb-6">
+      Submit this once to request the FormSubmit activation email for infoshivsteelfurniture@gmail.com.
+    </p>
+
+    <form action="https://formsubmit.co/infoshivsteelfurniture@gmail.com" method="POST" class="space-y-4">
+      <input type="hidden" name="_subject" value="Activate Shiv Steel Furniture Contact Form">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="source" value="Activation page">
+
+      <div>
+        <label for="name" class="block text-sm font-bold uppercase tracking-wider mb-1">Name</label>
+        <input id="name" name="name" required value="Activation Test" class="w-full px-4 py-3 border border-slate-300 rounded-lg">
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-bold uppercase tracking-wider mb-1">Reply Email</label>
+        <input id="email" name="email" type="email" required value="infoshivsteelfurniture@gmail.com" class="w-full px-4 py-3 border border-slate-300 rounded-lg">
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-bold uppercase tracking-wider mb-1">Message</label>
+        <textarea id="message" name="message" required rows="4" class="w-full px-4 py-3 border border-slate-300 rounded-lg">Please activate this contact form endpoint.</textarea>
+      </div>
+
+      <button type="submit" class="w-full py-3.5 px-6 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg">
+        Send Activation Request
+      </button>
+    </form>
+
+    <p class="text-xs text-slate-500 mt-5">
+      After submitting, check Inbox, Spam, Updates, and Promotions in Gmail.
+    </p>
+  </main>
+</body>
+</html>
