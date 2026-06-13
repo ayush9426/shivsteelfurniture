@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiv Steel Furniture | Interactive Catalogue</title>
+  <meta name="description"
+    content="Explore the premium steel furniture and architectural railing catalogue by Shiv Steel Furniture. Heavy-duty swings, sofas, designer beds, and secure glass railing systems in Ahmedabad.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="app-header">
+    <div class="header-container">
+      <a href="#/" class="logo-link" id="header-logo-container">
+        <!-- Modern Custom SVG Logo for SSF (Shiv Steel Furniture) -->
+        <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Unique Modern Geometric Monogram SSF -->
+          <g class="logo-g">
+            <!-- First S -->
+            <path d="M35,32 H25 C20,32 20,44 25,44 H30 C35,44 35,56 30,56 H20" stroke="url(#tealGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" class="logo-path p1"/>
+            <!-- Second S -->
+            <path d="M55,32 H45 C40,32 40,44 45,44 H50 C55,44 55,56 50,56 H40" stroke="url(#tealGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" class="logo-path p2"/>
+            <!-- F -->
+            <path d="M68,56 V32 H80 M68,44 H76" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" class="logo-path p3"/>
+            <!-- Decorative Tech Line underneath -->
+            <path d="M20,68 H80" stroke="url(#lineGrad)" stroke-width="3.5" stroke-linecap="round" class="logo-bar"/>
+          </g>
+          <defs>
+            <linearGradient id="tealGrad" x1="20" y1="32" x2="55" y2="56" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0d9488"/>
+              <stop offset="100%" stop-color="#06b6d4"/>
+            </linearGradient>
+            <linearGradient id="goldGrad" x1="68" y1="32" x2="80" y2="56" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#fbbf24"/>
+              <stop offset="100%" stop-color="#f59e0b"/>
+            </linearGradient>
+            <linearGradient id="lineGrad" x1="20" y1="68" x2="80" y2="68" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0d9488"/>
+              <stop offset="50%" stop-color="#06b6d4"/>
+              <stop offset="100%" stop-color="#fbbf24"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">SHIV STEEL</span>
+          <span class="brand-sub">FURNITURE</span>
+        </div>
+      </a>
+
+      <!-- Mobile Menu Toggle Button (hamburger style) -->
+      <button class="mobile-toggle-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
+          class="menu-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-16 6h16" />
+        </svg>
+      </button>
+
+      <!-- Desktop Navigation Links (Catalogue & Contact) -->
+      <nav class="nav-links">
+        <a href="#/catalogue" class="nav-link active" id="nav-link-catalogue">Catalogue</a>
+        <a href="#/contact" class="nav-link" id="nav-link-contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Dropdown -->
+  <div class="mobile-menu hidden" id="mobile-menu">
+    <nav class="mobile-nav">
+      <a href="#/catalogue" class="mobile-nav-link">Catalogue</a>
+      <a href="#/contact" class="mobile-nav-link">Contact Us</a>
+    </nav>
+  </div>
+
+  <!-- Main Content Areas -->
+  <main class="main-content">
+
+    <!-- View 1: Catalogue (Set as the landing view, active by default) -->
+    <section id="view-catalogue" class="view-screen">
+      <div class="catalogue-header">
+        <!-- <span class="sub-heading">Shiv Steel Furniture</span> -->
+        <h2>Explore Our Product Catalogue</h2>
+        <p>Browse through our collection of premium steel swings, sofa frames, bed furniture, and modern glass railings.
+          Tap cards to see details.</p>
+      </div>
+
+      <!-- Search & Filters Container (All Products tab removed) -->
+      <div class="filter-panel">
+        <div class="filter-tabs-row">
+          <button class="filter-tab active" id="tab-furniture" data-category="furniture">Steel Furniture</button>
+          <button class="filter-tab" id="tab-railing" data-category="railing">Railings & Gates</button>
+        </div>
+
+        <div class="search-box-container">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="search-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input type="text" id="catalogue-search"
+            placeholder="Search products by title, features, or SS grade (e.g. Swing, 304, Glass)..."
+            aria-label="Search Catalogue">
+          <span class="product-count-badge" id="product-count">0 items</span>
+        </div>
+      </div>
+
+      <!-- Catalogue Products Grid -->
+      <div class="catalogue-grid" id="catalogue-grid">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Loading catalogue items...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- View 2: Contact (Designation Labels Removed, styled as metallic cards in CSS) -->
+    <section id="view-contact" class="view-screen hidden">
+      <div class="contact-page-wrapper">
+        <div class="contact-header-center">
+          <span class="sub-heading">Connect With Us</span>
+          <h2>Let's Build Something Strong</h2>
+          <p>Get in touch with us for customized pricing blueprints and material certifications.</p>
+        </div>
+
+        <div class="premium-contact-grid">
+
+          <!-- Contact Left: Primary Office details & Owner Cards -->
+          <div class="premium-contact-sidebar">
+
+            <!-- Primary Office & Workshop details -->
+            <div class="contact-brand-card">
+              <div class="brand-badge">Primary Office & Workshop</div>
+              <h3>Shiv Steel Furniture</h3>
+              <p class="brand-loc">Shop no: 6-7-8, Parvati Nagar Shopping Center, Viratnagar, Ahmedabad, Gujarat -
+                382415</p>
+
+              <div class="brand-meta-item">
+                <span class="meta-label">EMAIL:</span>
+                <a href="mailto:infoshivsteelfurniture@gmail.com" class="meta-val">infoshivsteelfurniture@gmail.com</a>
+              </div>
+
+              <div class="brand-meta-item">
+                <span class="meta-label">WHATSAPP:</span>
+                <a href="https://wa.me/919426077429" target="_blank" rel="noopener noreferrer"
+                  class="whatsapp-badge-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wa-badge-svg" viewBox="0 0 24 24">
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.262-3.822l.374.222c1.6.952 3.447 1.454 5.337 1.455 5.725 0 10.383-4.66 10.386-10.387.002-2.774-1.077-5.383-3.039-7.348C17.06 2.158 14.45 1.077 11.678 1.077c-5.731 0-10.39 4.66-10.393 10.389-.001 1.957.514 3.868 1.493 5.568l.244.425-1.01 3.693 3.782-.992z" />
+                  </svg>
+                  Chat: +91 94260 77429
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Right: High-end Inquiry Form -->
+          <div class="premium-inquiry-box">
+            <div class="inquiry-box-header">
+              <h3>Get A Custom Quote</h3>
+              <p>Fill out the form below to receive a callback from our metal engineers.</p>
+            </div>
+
+            <form id="contact-form" action="https://formsubmit.co/infoshivsteelfurniture@gmail.com" method="POST"
+              class="styled-inquiry-form">
+              <!-- FormSubmit Configurations -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="New Blueprints & Steel Inquiry from SSF Catalogue">
+              <input type="hidden" name="_next" value="http://localhost:8000/#/contact">
+
+              <div class="floating-group">
+                <input type="text" id="form-name" name="name" required placeholder=" ">
+                <label for="form-name">Full Name *</label>
+              </div>
+
+              <div class="floating-group">
+                <input type="tel" id="form-phone" name="phone" required placeholder=" ">
+                <label for="form-phone">Contact Mobile Number *</label>
+              </div>
+
+              <div class="floating-group">
+                <input type="email" id="form-email" name="email" placeholder=" ">
+                <label for="form-email">Email Address (Optional)</label>
+              </div>
+
+              <div class="floating-group">
+                <textarea id="form-message" name="message" rows="4" required placeholder=" "></textarea>
+                <label for="form-message">Requirement Details (Size, grade, swing/railing model) *</label>
+              </div>
+
+              <div id="form-status" class="form-status-alert hidden"></div>
+
+              <button type="submit" class="submit-btn">
+                <span>Submit Inquiry</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  class="submit-arrow-svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Redesigned Mini Copyright note -->
+        <div class="contact-page-bottom-credits">
+          <p>&copy; 2026 Shiv Steel Furniture. Ahmedabad, Gujarat. All rights reserved. Crafted for strength & modern
+            elevates.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Product Detail Modal Backdrop (hidden by default) -->
+  <div class="modal-backdrop hidden" id="details-modal" role="dialog" aria-modal="true">
+    <div class="modal-wrapper">
+      <button class="modal-close-btn close-btn" aria-label="Close Modal">&times;</button>
+      <div class="modal-body-content" id="details-modal-content">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Zoom Modal (hidden by default) -->
+  <div class="zoom-modal-backdrop hidden" id="zoom-modal" role="dialog" aria-modal="true">
+    <div class="zoom-wrapper">
+      <button class="zoom-close-btn close-btn" aria-label="Close Zoom">&times;</button>
+      <img src="" id="zoom-modal-img" alt="Zoomed Product Image">
+    </div>
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="app.js"></script>
+</body>
+
+</html>
