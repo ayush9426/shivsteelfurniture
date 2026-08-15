@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512">
+  <rect width="100" height="100" fill="#0f172a"/>
+  <path d="M50 8L88 30V70L50 92L12 70V30L50 8Z" stroke="#3b82f6" stroke-width="4" fill="#1e293b"/>
+  <text x="50" y="63" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" font-weight="900" fill="white">SSF</text>
+</svg>
