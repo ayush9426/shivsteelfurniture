@@ -153,6 +153,11 @@ function switchView(viewName) {
   const mobileMenu = document.getElementById('mobile-menu');
   if (mobileMenu) mobileMenu.classList.add('hidden');
   
+  if (viewName === 'catalogue') {
+    updateCatalogueTabs();
+    renderCatalogue();
+  }
+
   // Scroll to top
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
@@ -170,6 +175,46 @@ function initMobileMenu() {
 }
 
 // 3. Catalogue Controller
+function updateCatalogueTabs() {
+  const tabFurniture = document.getElementById('tab-furniture');
+  const tabRailing = document.getElementById('tab-railing');
+  
+  if (tabFurniture && tabRailing) {
+    if (STATE.catalogueCategory === 'furniture') {
+      tabFurniture.classList.add('bg-slate-900', 'text-white', 'border-slate-900');
+      tabFurniture.classList.remove('bg-white', 'text-slate-900', 'border-slate-300');
+      
+      tabRailing.classList.remove('bg-slate-900', 'text-white', 'border-slate-900');
+      tabRailing.classList.add('bg-white', 'text-slate-900', 'border-slate-300');
+    } else {
+      tabRailing.classList.add('bg-slate-900', 'text-white', 'border-slate-900');
+      tabRailing.classList.remove('bg-white', 'text-slate-900', 'border-slate-300');
+      
+      tabFurniture.classList.remove('bg-slate-900', 'text-white', 'border-slate-900');
+      tabFurniture.classList.add('bg-white', 'text-slate-900', 'border-slate-300');
+    }
+  }
+}
+
+function setCatalogueCategory(category, scrollToTop = true) {
+  STATE.catalogueCategory = category;
+  
+  if (window.location.hash !== '#/catalogue') {
+    window.location.hash = '#/catalogue';
+  } else if (STATE.currentView !== 'catalogue') {
+    switchView('catalogue');
+  } else {
+    updateCatalogueTabs();
+    renderCatalogue();
+  }
+
+  if (scrollToTop) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+window.setCatalogueCategory = setCatalogueCategory;
+
 function initCatalogueListeners() {
   const searchInput = document.getElementById('catalogue-search');
   if (searchInput) {
@@ -183,30 +228,19 @@ function initCatalogueListeners() {
   const tabFurniture = document.getElementById('tab-furniture');
   const tabRailing = document.getElementById('tab-railing');
   
-  if (tabFurniture && tabRailing) {
+  if (tabFurniture) {
     tabFurniture.addEventListener('click', () => {
-      STATE.catalogueCategory = 'furniture';
-      tabFurniture.classList.add('bg-slate-900', 'text-white', 'border-slate-900');
-      tabFurniture.classList.remove('bg-white', 'text-slate-900', 'border-slate-300');
-      
-      tabRailing.classList.remove('bg-slate-900', 'text-white', 'border-slate-900');
-      tabRailing.classList.add('bg-white', 'text-slate-900', 'border-slate-300');
-      
-      renderCatalogue();
-    });
-    
-    tabRailing.addEventListener('click', () => {
-      STATE.catalogueCategory = 'railing';
-      tabRailing.classList.add('bg-slate-900', 'text-white', 'border-slate-900');
-      tabRailing.classList.remove('bg-white', 'text-slate-900', 'border-slate-300');
-      
-      tabFurniture.classList.remove('bg-slate-900', 'text-white', 'border-slate-900');
-      tabFurniture.classList.add('bg-white', 'text-slate-900', 'border-slate-300');
-      
-      renderCatalogue();
+      setCatalogueCategory('furniture', true);
     });
   }
   
+  if (tabRailing) {
+    tabRailing.addEventListener('click', () => {
+      setCatalogueCategory('railing', true);
+    });
+  }
+  
+  updateCatalogueTabs();
   renderCatalogue(); // Initial render
 }
 
