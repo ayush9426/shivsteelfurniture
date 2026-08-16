@@ -23,7 +23,7 @@ const CONFIG = {
 };
 
 // Data Models
-const PRODUCTS = [{id:"f1",name:"Luxury Steel Swing",category:"furniture",description:"Premium Outdoor swing with heavy-duty chain and comfortable seating.",image:"/images/f1.jpg",features:["Heavy Gauge","Rust Free","Custom Cushion"]},{id:"f2",name:"Modern Steel Sofa",category:"furniture",description:"3-seater stainless steel sofa with ergonomic comfort.",image:"/images/f2.jpg",features:["304 Grade","Mirror Finish"]},{id:"f3",name:"Wooden Designer Jula",category:"furniture",description:"Traditional steel jula with Wooden design.",image:"/images/f3.jpg",features:["Strong Frame","Indoor Use"]},{id:"f4",name:"Steel Double Bed Frame",category:"furniture",description:"Heavy-duty steel bed frame for long-lasting use.",image:"/images/f4.jpg",features:["Load Bearing","Noise Free","Rust Resistant"]},{id:"f5",name:"Steel Single Bed",category:"furniture",description:"Compact steel bed suitable for homes and hostels.",image:"/images/f5.jpg",features:["Compact Design","Strong Weld","Low Maintenance"]},{id:"f6",name:"Steel Folding Bed",category:"furniture",description:"Space-saving folding steel bed with smooth mechanism.",image:"/images/f6.jpg",features:["Foldable","Space Saving","Easy Storage"]},{id:"f7",name:"Steel Cradle (Palna)",category:"furniture",description:"Safe and sturdy steel cradle for infants.",image:"/images/f7.jpg",features:["Smooth Finish","Child Safe","Balanced Design"]},{id:"f8",name:"Steel Dining Table Set",category:"furniture",description:"Modern steel dining table with solid structure.",image:"/images/f8.jpg",features:["Heavy Base","Modern Look","Scratch Resistant"]},{id:"f9",name:"SS Chair",category:"furniture",description:"Comfortable steel chair with cushioned seat.",image:"/images/f9.jpg",features:["Comfort Seat","Strong Legs","Easy Clean"]},{id:"f10",name:"Steel Study Table",category:"furniture",description:"Minimal steel study table for home and office.",image:"/images/f10.jpg",features:["Compact","Modern Finish","Durable"]},{id:"f11",name:"SS Office Chair",category:"furniture",description:"Strong steel office chair with long seating comfort.",image:"/images/f11.jpg",features:["Ergonomic","Stable Frame","Professional Use"]},{id:"f12",name:"Steel Shoe Rack",category:"furniture",description:"Multi-layer steel shoe rack with modern design.",image:"/images/f12.jpg",features:["Space Saving","Rust Proof","Easy Assembly"]},{id:"f13",name:"SS Wardrobe",category:"furniture",description:"Spacious steel almirah for secure storage.",image:"/images/f13.jpg",features:["Lockable","Spacious","Heavy Duty"]},{id:"f14",name:"Steel Bar Stool",category:"furniture",description:"Modern steel bar stool with stable base.",image:"/images/f14.jpg",features:["Modern Look","Strong Support","Anti-Slip"]},{id:"f15",name:"Steel Center Table",category:"furniture",description:"Minimal steel center table for living room.",image:"/images/f15.jpg",features:["Stable Base","Elegant Look","Scratch Resistant"]},{id:"f16",name:" Bookshelf",category:"furniture",description:"Vertical steel bookshelf with multiple shelves.",image:"/images/f16.jpg",features:["High Strength","Space Efficient","Modern Finish"]},{id:"f17",name:"Steel Balcony Chair",category:"furniture",description:"Weather-resistant steel chair for balcony use.",image:"/images/f17.jpg",features:["Outdoor Safe","Rust Resistant","Lightweight"]},{id:"f18",name:"Steel Garden Bench",category:"furniture",description:"Heavy steel bench suitable for gardens and outdoors.",image:"/images/f18.jpg",features:["Weather Proof","Strong Build","Long Life"]},{id:"f19",name:"Steel Side Table",category:"furniture",description:"Compact steel side table for multi-purpose use.",image:"/images/f19.jpg",features:["Lightweight","Modern Design","Easy Move"]},{id:"f20",name:" Storage Rack",category:"furniture",description:"Multi-level steel rack for home and shop storage.",image:"/images/f20.jpg",features:["High Load","Adjustable Shelves","Durable"]},{id:"f21",name:"Steel Bunk Bed",category:"furniture",description:"Space-efficient steel bunk bed for hostels.",image:"/images/f21.jpg",features:["Heavy Duty","Safe Ladder","Compact"]},{id:"f22",name:"Designer Hanging Jula",category:"furniture",description:"Contemporary hanging steel jula with premium finish.",image:"/images/f22.jpg",features:["Designer Look","Heavy Chain","Indoor & Outdoor"]},{id:"f23",name:"Royal Carved  Jula",category:"furniture",description:"Traditional royal-style steel jula with artistic carving.",image:"/images/f23.jpg",features:["Decorative Design","Heavy Duty","Handcrafted Finish"]},{id:"f24",name:"Modern Single Jula",category:"furniture",description:"Single steel jula for modern homes.",image:"/images/f24.jpg",features:["Minimal Design","Strong Frame","Space Friendly"]},{id:"f25",name:"Ergonomic Sofa Cum-Bed",category:"furniture",description:"Space-saving steel sofa cum-bed with smooth sofa-to-bed conversion.",image:"/images/f25.jpg",features:["Easy Open & Close","Ergonomic Comfort","Long Life"]},{id:"f26",name:"Hydraulic Storage Steel Bed",category:"furniture",description:"Steel bed with hydraulic storage for extra space.",image:"/images/f26.jpg",features:["Hydraulic Lift","Extra Storage","Strong Base"]},{id:"f27",name:" Kitchen Storage Rack",category:"furniture",description:"Multi-purpose steel rack for kitchen storage.",image:"/images/f27.jpg",features:["Multi Shelf","Easy Clean","Heavy Load"]},{id:"f28",name:"Steel Prayer Mandir",category:"furniture",description:"Compact steel mandir for home prayer space.",image:"/images/f28.jpg",features:["Decorative Panels","Compact Size","Easy Install"]},{id:"f29",name:" Utility Cabinet",category:"furniture",description:"Multi-purpose steel cabinet for home and shop use.",image:"/images/f29.jpg",features:["Multi Utility","Adjustable Shelves","Long Lasting"]},{id:"f30",name:"Steel Charpai (Cot)",category:"furniture",description:"Traditional steel charpai with strong woven support for daily use.",image:"/images/f30.jpg",features:["Heavy Duty Frame","Comfortable Weave","Long Lasting"]},{id:"f31",name:"Steel Folding Charpai",category:"furniture",description:"Space-saving steel folding charpai ideal for easy storage and travel.",image:"/images/f31.jpg",features:["Foldable Design","Strong Steel Frame","Easy Storage"]},{id:"f32",name:"Single Seater Hanging Jula",category:"furniture",description:"Compact single-seater hanging steel jula perfect for balconies and indoor spaces.",image:"/images/f32.jpg",features:["Comfortable Seat","Heavy Chain Support","Space Saving"]},{id:"f33",name:"Rocking Stainless Steel Chair",category:"furniture",description:"Comfortable stainless steel rocking chair with smooth curved base for relaxation.",image:"/images/f33.jpg",features:["Smooth Rocking","Ergonomic Design","Strong Frame"]},{id:"f34",name:"Foldable Stainless Steel Baby Cradle",category:"furniture",description:"Space-saving foldable stainless steel baby cradle with smooth rocking and safety lock.",image:"/images/f34.jpg",features:["Foldable Design","Smooth Rocking","Child Safe Lock"]},{id:"r1",name:"Frameless Toughened Glass Railing",category:"railing",description:"12mm clear toughened glass with SS 316 side-mounted clamps for balconies.",image:"/images/r1.jpg",features:["Frameless Design","SS 316 Grade","Modern Look"]},{id:"r2",name:"SS Vertical Slat Stair Railing",category:"railing",description:"Vertical stainless steel slats with matte finish for staircases.",image:"/images/r2.jpg",features:["Matte Finish","Child Safe","Strong Build"]},{id:"r3",name:"Glass + SS Top Rail Balcony",category:"railing",description:"Toughened glass panels with polished SS round handrail.",image:"/images/r3.jpg",features:["Polished Finish","Luxury Feel"]},{id:"r4",name:"Laser Cut SS Panel Railing",category:"railing",description:"Decorative laser-cut SS panels with modern geometric patterns.",image:"/images/r4.jpg",features:["Custom Patterns","Designer Look"]},{id:"r5",name:"SS Horizontal Pipe Railing",category:"railing",description:"Horizontal SS pipes with brushed finish for balconies.",image:"/images/r5.jpg",features:["Minimal Style","Weather Resistant"]},{id:"r6",name:"Tinted Glass SS Railing",category:"railing",description:"Grey tinted toughened glass with SS posts for modern homes.",image:"/images/r6.jpg",features:["UV Protection","Premium Glass"]},{id:"r7",name:"Curved Glass Staircase Railing",category:"railing",description:"Custom curved toughened glass railing with SS handrail.",image:"/images/r7.jpg",features:["Custom Shape","Architectural Design"]},{id:"r8",name:"SS Cable Railing System",category:"railing",description:"Stainless steel tension cable railing for open view balconies.",image:"/images/r8.jpg",features:["Open View","Modern Industrial"]},{id:"r9",name:"Black SS Matte Glass Railing",category:"railing",description:"Matte black stainless steel frame with clear glass panels.",image:"/images/r9.jpg",features:["Black Finish","Contemporary Style"]},{id:"r10",name:"SS Handrail with Frosted Glass",category:"railing",description:"Frosted glass panels with round SS handrail for privacy.",image:"/images/r10.jpg",features:["Privacy Glass","Elegant Look"]},{id:"r11",name:"Gold PVD SS Glass Railing",category:"railing",description:"Gold PVD coated stainless steel with ultra-clear glass.",image:"/images/r11.jpg",features:["Luxury Finish","Rust Resistant"]},{id:"r12",name:"Minimal SS Bar Railing",category:"railing",description:" SS bars arranged in modern  pattern.",image:"/images/r12.jpg",features:["Minimal Design","High Strength"]},{id:"r13",name:"SS Post Glass Balcony Railing",category:"railing",description:"SS vertical posts with clear toughened glass inserts.",image:"/images/r13.jpg",features:["Classic Modern","Easy Maintenance"]},{id:"r14",name:"Double Height Glass Railing",category:"railing",description:"Extra-height glass railing for duplex and villas.",image:"/images/r14.jpg",features:["High Safety","Villa Design"]},{id:"r15",name:"SS Mesh Panel Railing",category:"railing",description:"Stainless steel wire mesh infill with solid SS frame.",image:"/images/r15.jpg",features:["Industrial Look","High Durability"]},{id:"r16",name:"Smart LED SS Glass Railing",category:"railing",description:"LED integrated SS railing with clear glass panels.",image:"/images/r16.jpg",features:["LED Lighting","Night Visibility"]},{id:"r17",name:"SS Wooden Finish Glass Railing",category:"railing",description:"Wood-textured SS top rail with glass panels.",image:"/images/r17.jpg",features:["Wood Finish","Modern Fusion"]},{id:"r18",name:"Spider Fitting Glass Railing",category:"railing",description:"Glass railing supported by SS spider fittings.",image:"/images/r18.jpg",features:["Structural Glass","Premium Engineering"]},{id:"r19",name:"SS Perforated Sheet Railing",category:"railing",description:"Perforated SS sheets with modern pattern design.",image:"/images/r19.jpg",features:["Air Flow","Designer Pattern"]},{id:"r20",name:"Ultra Clear Glass SS Railing",category:"railing",description:"Low-iron ultra-clear glass with polished SS railing.",image:"/images/r20.jpg",features:["Crystal Clear","Luxury Finish"]},{id:"r21",name:"Floating Glass Edge Railing",category:"railing",description:"Base-mounted floating toughened glass railing with concealed SS channel.",image:"/images/r21.jpg",features:["Concealed Fixing","Seamless Finish","Ultra Modern"]},{id:"r22",name:"Dual-Tone SS Glass Railing",category:"railing",description:"Dual-tone stainless steel finish combined with clear glass panels.",image:"/images/r22.jpg",features:["Dual Finish","Luxury Design","Contemporary Style"]},{id:"r23",name:"Wave Pattern SS Designer Railing",category:"railing",description:"Custom wave-pattern stainless steel panels for artistic railing designs.",image:"/images/r23.jpg",features:["Artistic Design","Custom Patterns","High Strength"]},{id:"r24",name:"SS Fin Blade Architectural Railing",category:"railing",description:"Vertical SS fin blades creating a bold architectural statement.",image:"/images/r24.jpg",features:["Architectural Style","Modern Elevation","Heavy Duty"]},{id:"r25",name:"SS Twisted Rod Designer Railing",category:"railing",description:"Twisted stainless steel rods arranged in a premium decorative pattern for balconies and staircases.",image:"/images/r25.jpg",features:["Twisted Rod Design","Decorative Style","Heavy Gauge SS"]},{id:"r26",name:"SS Criss-Cross Frame Railing",category:"railing",description:"Stainless steel flat bars in a criss-cross lattice frame for modern architectural railings.",image:"/images/r26.jpg",features:["Criss-Cross Pattern","Architectural Look","High Strength"]},{id:"r27",name:"SS Vertical Tube Cluster Railing",category:"railing",description:"Clustered vertical stainless steel tubes with varying spacing for a bold modern appearance.",image:"/images/r27.jpg",features:["Tube Cluster Design","Contemporary Style","Durable Finish"]}];
+const PRODUCTS = [{ id: "f1", name: "Luxury Steel Swing", category: "furniture", description: "Premium Outdoor swing with heavy-duty chain and comfortable seating.", image: "/images/f1.jpg", features: ["Heavy Gauge", "Rust Free", "Custom Cushion"] }, { id: "f2", name: "Modern Steel Sofa", category: "furniture", description: "3-seater stainless steel sofa with ergonomic comfort.", image: "/images/f2.jpg", features: ["304 Grade", "Mirror Finish"] }, { id: "f3", name: "Wooden Designer Jula", category: "furniture", description: "Traditional steel jula with Wooden design.", image: "/images/f3.jpg", features: ["Strong Frame", "Indoor Use"] }, { id: "f4", name: "Steel Double Bed Frame", category: "furniture", description: "Heavy-duty steel bed frame for long-lasting use.", image: "/images/f4.jpg", features: ["Load Bearing", "Noise Free", "Rust Resistant"] }, { id: "f5", name: "Steel Single Bed", category: "furniture", description: "Compact steel bed suitable for homes and hostels.", image: "/images/f5.jpg", features: ["Compact Design", "Strong Weld", "Low Maintenance"] }, { id: "f6", name: "Steel Folding Bed", category: "furniture", description: "Space-saving folding steel bed with smooth mechanism.", image: "/images/f6.jpg", features: ["Foldable", "Space Saving", "Easy Storage"] }, { id: "f7", name: "Steel Cradle (Palna)", category: "furniture", description: "Safe and sturdy steel cradle for infants.", image: "/images/f7.jpg", features: ["Smooth Finish", "Child Safe", "Balanced Design"] }, { id: "f8", name: "Steel Dining Table Set", category: "furniture", description: "Modern steel dining table with solid structure.", image: "/images/f8.jpg", features: ["Heavy Base", "Modern Look", "Scratch Resistant"] }, { id: "f9", name: "SS Chair", category: "furniture", description: "Comfortable steel chair with cushioned seat.", image: "/images/f9.jpg", features: ["Comfort Seat", "Strong Legs", "Easy Clean"] }, { id: "f10", name: "Steel Study Table", category: "furniture", description: "Minimal steel study table for home and office.", image: "/images/f10.jpg", features: ["Compact", "Modern Finish", "Durable"] }, { id: "f11", name: "SS Office Chair", category: "furniture", description: "Strong steel office chair with long seating comfort.", image: "/images/f11.jpg", features: ["Ergonomic", "Stable Frame", "Professional Use"] }, { id: "f12", name: "Steel Shoe Rack", category: "furniture", description: "Multi-layer steel shoe rack with modern design.", image: "/images/f12.jpg", features: ["Space Saving", "Rust Proof", "Easy Assembly"] }, { id: "f13", name: "SS Wardrobe", category: "furniture", description: "Spacious steel almirah for secure storage.", image: "/images/f13.jpg", features: ["Lockable", "Spacious", "Heavy Duty"] }, { id: "f14", name: "Steel Bar Stool", category: "furniture", description: "Modern steel bar stool with stable base.", image: "/images/f14.jpg", features: ["Modern Look", "Strong Support", "Anti-Slip"] }, { id: "f15", name: "Steel Center Table", category: "furniture", description: "Minimal steel center table for living room.", image: "/images/f15.jpg", features: ["Stable Base", "Elegant Look", "Scratch Resistant"] }, { id: "f16", name: " Bookshelf", category: "furniture", description: "Vertical steel bookshelf with multiple shelves.", image: "/images/f16.jpg", features: ["High Strength", "Space Efficient", "Modern Finish"] }, { id: "f17", name: "Steel Balcony Chair", category: "furniture", description: "Weather-resistant steel chair for balcony use.", image: "/images/f17.jpg", features: ["Outdoor Safe", "Rust Resistant", "Lightweight"] }, { id: "f18", name: "Steel Garden Bench", category: "furniture", description: "Heavy steel bench suitable for gardens and outdoors.", image: "/images/f18.jpg", features: ["Weather Proof", "Strong Build", "Long Life"] }, { id: "f19", name: "Steel Side Table", category: "furniture", description: "Compact steel side table for multi-purpose use.", image: "/images/f19.jpg", features: ["Lightweight", "Modern Design", "Easy Move"] }, { id: "f20", name: " Storage Rack", category: "furniture", description: "Multi-level steel rack for home and shop storage.", image: "/images/f20.jpg", features: ["High Load", "Adjustable Shelves", "Durable"] }, { id: "f21", name: "Steel Bunk Bed", category: "furniture", description: "Space-efficient steel bunk bed for hostels.", image: "/images/f21.jpg", features: ["Heavy Duty", "Safe Ladder", "Compact"] }, { id: "f22", name: "Designer Hanging Jula", category: "furniture", description: "Contemporary hanging steel jula with premium finish.", image: "/images/f22.jpg", features: ["Designer Look", "Heavy Chain", "Indoor & Outdoor"] }, { id: "f23", name: "Royal Carved  Jula", category: "furniture", description: "Traditional royal-style steel jula with artistic carving.", image: "/images/f23.jpg", features: ["Decorative Design", "Heavy Duty", "Handcrafted Finish"] }, { id: "f24", name: "Modern Single Jula", category: "furniture", description: "Single steel jula for modern homes.", image: "/images/f24.jpg", features: ["Minimal Design", "Strong Frame", "Space Friendly"] }, { id: "f25", name: "Ergonomic Sofa Cum-Bed", category: "furniture", description: "Space-saving steel sofa cum-bed with smooth sofa-to-bed conversion.", image: "/images/f25.jpg", features: ["Easy Open & Close", "Ergonomic Comfort", "Long Life"] }, { id: "f26", name: "Hydraulic Storage Steel Bed", category: "furniture", description: "Steel bed with hydraulic storage for extra space.", image: "/images/f26.jpg", features: ["Hydraulic Lift", "Extra Storage", "Strong Base"] }, { id: "f27", name: " Kitchen Storage Rack", category: "furniture", description: "Multi-purpose steel rack for kitchen storage.", image: "/images/f27.jpg", features: ["Multi Shelf", "Easy Clean", "Heavy Load"] }, { id: "f28", name: "Steel Prayer Mandir", category: "furniture", description: "Compact steel mandir for home prayer space.", image: "/images/f28.jpg", features: ["Decorative Panels", "Compact Size", "Easy Install"] }, { id: "f29", name: " Utility Cabinet", category: "furniture", description: "Multi-purpose steel cabinet for home and shop use.", image: "/images/f29.jpg", features: ["Multi Utility", "Adjustable Shelves", "Long Lasting"] }, { id: "f30", name: "Steel Charpai (Cot)", category: "furniture", description: "Traditional steel charpai with strong woven support for daily use.", image: "/images/f30.jpg", features: ["Heavy Duty Frame", "Comfortable Weave", "Long Lasting"] }, { id: "f31", name: "Steel Folding Charpai", category: "furniture", description: "Space-saving steel folding charpai ideal for easy storage and travel.", image: "/images/f31.jpg", features: ["Foldable Design", "Strong Steel Frame", "Easy Storage"] }, { id: "f32", name: "Single Seater Hanging Jula", category: "furniture", description: "Compact single-seater hanging steel jula perfect for balconies and indoor spaces.", image: "/images/f32.jpg", features: ["Comfortable Seat", "Heavy Chain Support", "Space Saving"] }, { id: "f33", name: "Rocking Stainless Steel Chair", category: "furniture", description: "Comfortable stainless steel rocking chair with smooth curved base for relaxation.", image: "/images/f33.jpg", features: ["Smooth Rocking", "Ergonomic Design", "Strong Frame"] }, { id: "f34", name: "Foldable Stainless Steel Baby Cradle", category: "furniture", description: "Space-saving foldable stainless steel baby cradle with smooth rocking and safety lock.", image: "/images/f34.jpg", features: ["Foldable Design", "Smooth Rocking", "Child Safe Lock"] }, { id: "r1", name: "Frameless Toughened Glass Railing", category: "railing", description: "12mm clear toughened glass with SS 316 side-mounted clamps for balconies.", image: "/images/r1.jpg", features: ["Frameless Design", "SS 316 Grade", "Modern Look"] }, { id: "r2", name: "SS Vertical Slat Stair Railing", category: "railing", description: "Vertical stainless steel slats with matte finish for staircases.", image: "/images/r2.jpg", features: ["Matte Finish", "Child Safe", "Strong Build"] }, { id: "r3", name: "Glass + SS Top Rail Balcony", category: "railing", description: "Toughened glass panels with polished SS round handrail.", image: "/images/r3.jpg", features: ["Polished Finish", "Luxury Feel"] }, { id: "r4", name: "Laser Cut SS Panel Railing", category: "railing", description: "Decorative laser-cut SS panels with modern geometric patterns.", image: "/images/r4.jpg", features: ["Custom Patterns", "Designer Look"] }, { id: "r5", name: "SS Horizontal Pipe Railing", category: "railing", description: "Horizontal SS pipes with brushed finish for balconies.", image: "/images/r5.jpg", features: ["Minimal Style", "Weather Resistant"] }, { id: "r6", name: "Tinted Glass SS Railing", category: "railing", description: "Grey tinted toughened glass with SS posts for modern homes.", image: "/images/r6.jpg", features: ["UV Protection", "Premium Glass"] }, { id: "r7", name: "Curved Glass Staircase Railing", category: "railing", description: "Custom curved toughened glass railing with SS handrail.", image: "/images/r7.jpg", features: ["Custom Shape", "Architectural Design"] }, { id: "r8", name: "SS Cable Railing System", category: "railing", description: "Stainless steel tension cable railing for open view balconies.", image: "/images/r8.jpg", features: ["Open View", "Modern Industrial"] }, { id: "r9", name: "Black SS Matte Glass Railing", category: "railing", description: "Matte black stainless steel frame with clear glass panels.", image: "/images/r9.jpg", features: ["Black Finish", "Contemporary Style"] }, { id: "r10", name: "SS Handrail with Frosted Glass", category: "railing", description: "Frosted glass panels with round SS handrail for privacy.", image: "/images/r10.jpg", features: ["Privacy Glass", "Elegant Look"] }, { id: "r11", name: "Gold PVD SS Glass Railing", category: "railing", description: "Gold PVD coated stainless steel with ultra-clear glass.", image: "/images/r11.jpg", features: ["Luxury Finish", "Rust Resistant"] }, { id: "r12", name: "Minimal SS Bar Railing", category: "railing", description: " SS bars arranged in modern  pattern.", image: "/images/r12.jpg", features: ["Minimal Design", "High Strength"] }, { id: "r13", name: "SS Post Glass Balcony Railing", category: "railing", description: "SS vertical posts with clear toughened glass inserts.", image: "/images/r13.jpg", features: ["Classic Modern", "Easy Maintenance"] }, { id: "r14", name: "Double Height Glass Railing", category: "railing", description: "Extra-height glass railing for duplex and villas.", image: "/images/r14.jpg", features: ["High Safety", "Villa Design"] }, { id: "r15", name: "SS Mesh Panel Railing", category: "railing", description: "Stainless steel wire mesh infill with solid SS frame.", image: "/images/r15.jpg", features: ["Industrial Look", "High Durability"] }, { id: "r16", name: "Smart LED SS Glass Railing", category: "railing", description: "LED integrated SS railing with clear glass panels.", image: "/images/r16.jpg", features: ["LED Lighting", "Night Visibility"] }, { id: "r17", name: "SS Wooden Finish Glass Railing", category: "railing", description: "Wood-textured SS top rail with glass panels.", image: "/images/r17.jpg", features: ["Wood Finish", "Modern Fusion"] }, { id: "r18", name: "Spider Fitting Glass Railing", category: "railing", description: "Glass railing supported by SS spider fittings.", image: "/images/r18.jpg", features: ["Structural Glass", "Premium Engineering"] }, { id: "r19", name: "SS Perforated Sheet Railing", category: "railing", description: "Perforated SS sheets with modern pattern design.", image: "/images/r19.jpg", features: ["Air Flow", "Designer Pattern"] }, { id: "r20", name: "Ultra Clear Glass SS Railing", category: "railing", description: "Low-iron ultra-clear glass with polished SS railing.", image: "/images/r20.jpg", features: ["Crystal Clear", "Luxury Finish"] }, { id: "r21", name: "Floating Glass Edge Railing", category: "railing", description: "Base-mounted floating toughened glass railing with concealed SS channel.", image: "/images/r21.jpg", features: ["Concealed Fixing", "Seamless Finish", "Ultra Modern"] }, { id: "r22", name: "Dual-Tone SS Glass Railing", category: "railing", description: "Dual-tone stainless steel finish combined with clear glass panels.", image: "/images/r22.jpg", features: ["Dual Finish", "Luxury Design", "Contemporary Style"] }, { id: "r23", name: "Wave Pattern SS Designer Railing", category: "railing", description: "Custom wave-pattern stainless steel panels for artistic railing designs.", image: "/images/r23.jpg", features: ["Artistic Design", "Custom Patterns", "High Strength"] }, { id: "r24", name: "SS Fin Blade Architectural Railing", category: "railing", description: "Vertical SS fin blades creating a bold architectural statement.", image: "/images/r24.jpg", features: ["Architectural Style", "Modern Elevation", "Heavy Duty"] }, { id: "r25", name: "SS Twisted Rod Designer Railing", category: "railing", description: "Twisted stainless steel rods arranged in a premium decorative pattern for balconies and staircases.", image: "/images/r25.jpg", features: ["Twisted Rod Design", "Decorative Style", "Heavy Gauge SS"] }, { id: "r26", name: "SS Criss-Cross Frame Railing", category: "railing", description: "Stainless steel flat bars in a criss-cross lattice frame for modern architectural railings.", image: "/images/r26.jpg", features: ["Criss-Cross Pattern", "Architectural Look", "High Strength"] }, { id: "r27", name: "SS Vertical Tube Cluster Railing", category: "railing", description: "Clustered vertical stainless steel tubes with varying spacing for a bold modern appearance.", image: "/images/r27.jpg", features: ["Tube Cluster Design", "Contemporary Style", "Durable Finish"] }];
 
 PRODUCTS.push(
   { id: "f35", name: "Premium Stainless Jula Set", category: "furniture", description: "Heavy stainless steel jula set with smooth finish and comfortable family seating for indoor or covered balcony spaces.", image: "/images/1.jpeg", features: ["Premium Polish", "Heavy Chain", "Family Seating"] },
@@ -103,7 +103,7 @@ function initRouter() {
   const handleRoute = () => {
     const hash = window.location.hash || '#/';
     let view = 'home';
-    
+
     if (hash.startsWith('#/catalogue')) {
       view = 'catalogue';
     } else if (hash.startsWith('#/gallery')) {
@@ -113,32 +113,32 @@ function initRouter() {
     } else if (hash.startsWith('#/contact')) {
       view = 'contact';
     }
-    
+
     switchView(view);
   };
-  
+
   window.addEventListener('hashchange', handleRoute);
   handleRoute(); // Run once on load
 }
 
 function switchView(viewName) {
   STATE.currentView = viewName;
-  
+
   // Hide all view screens
   document.querySelectorAll('.view-screen').forEach(el => el.classList.add('hidden'));
-  
+
   // Show active view screen
   const activeView = document.getElementById(`view-${viewName}`);
   if (activeView) {
     activeView.classList.remove('hidden');
   }
-  
+
   // Update nav link active states
   document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href');
     const isHome = href === '#/' || href === '#';
     const isActive = isHome ? (viewName === 'home') : href.includes(viewName);
-    
+
     if (isActive) {
       link.classList.add('text-blue-500', 'font-bold');
       link.classList.remove('text-slate-300', 'text-slate-600', 'hover:text-blue-500');
@@ -152,7 +152,7 @@ function switchView(viewName) {
   // Mobile menu close on route change
   const mobileMenu = document.getElementById('mobile-menu');
   if (mobileMenu) mobileMenu.classList.add('hidden');
-  
+
   if (viewName === 'catalogue') {
     updateCatalogueTabs();
     renderCatalogue();
@@ -166,7 +166,7 @@ function switchView(viewName) {
 function initMobileMenu() {
   const menuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  
+
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
@@ -178,18 +178,18 @@ function initMobileMenu() {
 function updateCatalogueTabs() {
   const tabFurniture = document.getElementById('tab-furniture');
   const tabRailing = document.getElementById('tab-railing');
-  
+
   if (tabFurniture && tabRailing) {
     if (STATE.catalogueCategory === 'furniture') {
       tabFurniture.classList.add('bg-slate-900', 'text-white', 'border-slate-900');
       tabFurniture.classList.remove('bg-white', 'text-slate-900', 'border-slate-300');
-      
+
       tabRailing.classList.remove('bg-slate-900', 'text-white', 'border-slate-900');
       tabRailing.classList.add('bg-white', 'text-slate-900', 'border-slate-300');
     } else {
       tabRailing.classList.add('bg-slate-900', 'text-white', 'border-slate-900');
       tabRailing.classList.remove('bg-white', 'text-slate-900', 'border-slate-300');
-      
+
       tabFurniture.classList.remove('bg-slate-900', 'text-white', 'border-slate-900');
       tabFurniture.classList.add('bg-white', 'text-slate-900', 'border-slate-300');
     }
@@ -198,7 +198,7 @@ function updateCatalogueTabs() {
 
 function setCatalogueCategory(category, scrollToTop = true) {
   STATE.catalogueCategory = category;
-  
+
   if (window.location.hash !== '#/catalogue') {
     window.location.hash = '#/catalogue';
   } else if (STATE.currentView !== 'catalogue') {
@@ -223,23 +223,23 @@ function initCatalogueListeners() {
       renderCatalogue();
     });
   }
-  
+
   // Category tabs
   const tabFurniture = document.getElementById('tab-furniture');
   const tabRailing = document.getElementById('tab-railing');
-  
+
   if (tabFurniture) {
     tabFurniture.addEventListener('click', () => {
       setCatalogueCategory('furniture', true);
     });
   }
-  
+
   if (tabRailing) {
     tabRailing.addEventListener('click', () => {
       setCatalogueCategory('railing', true);
     });
   }
-  
+
   updateCatalogueTabs();
   renderCatalogue(); // Initial render
 }
@@ -247,16 +247,16 @@ function initCatalogueListeners() {
 function renderCatalogue() {
   const grid = document.getElementById('catalogue-grid');
   if (!grid) return;
-  
+
   // Filter products
   const filtered = PRODUCTS.filter(p => {
     const matchesCategory = p.category === STATE.catalogueCategory;
-    const matchesSearch = p.name.toLowerCase().includes(STATE.catalogueSearch) || 
-                          p.description.toLowerCase().includes(STATE.catalogueSearch) ||
-                          (p.features && p.features.some(f => f.toLowerCase().includes(STATE.catalogueSearch)));
+    const matchesSearch = p.name.toLowerCase().includes(STATE.catalogueSearch) ||
+      p.description.toLowerCase().includes(STATE.catalogueSearch) ||
+      (p.features && p.features.some(f => f.toLowerCase().includes(STATE.catalogueSearch)));
     return matchesCategory && matchesSearch;
   });
-  
+
   if (filtered.length === 0) {
     grid.innerHTML = `
       <div class="col-span-full text-center py-20 bg-white rounded border border-dashed border-slate-300">
@@ -266,12 +266,12 @@ function renderCatalogue() {
     `;
     return;
   }
-  
+
   grid.innerHTML = filtered.map(p => {
-    const featuresBadges = p.features && p.features.map(f => 
+    const featuresBadges = p.features && p.features.map(f =>
       `<span class="text-xs font-semibold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">${f}</span>`
     ).join('') || '';
-    
+
     return `
       <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-all duration-300 group">
         <div class="relative overflow-hidden aspect-[4/3] bg-slate-100 cursor-zoom-in" onclick="openImageModal('${p.image}')">
@@ -293,7 +293,7 @@ function renderCatalogue() {
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.262-3.822l.374.222c1.6.952 3.447 1.454 5.337 1.455 5.725 0 10.383-4.66 10.386-10.387.002-2.774-1.077-5.383-3.039-7.348C17.06 2.158 14.45 1.077 11.678 1.077c-5.731 0-10.39 4.66-10.393 10.389-.001 1.957.514 3.868 1.493 5.568l.244.425-1.01 3.693 3.782-.992z"/>
               </svg>
-              Enquiry on WhatsApp
+              Enquiry
             </a>
           </div>
         </div>
@@ -309,28 +309,28 @@ function initGalleryListeners() {
     tab.addEventListener('click', (e) => {
       tabs.forEach(t => t.classList.remove('bg-slate-900', 'text-white', 'border-slate-900'));
       tabs.forEach(t => t.classList.add('bg-white', 'text-slate-900', 'border-slate-300'));
-      
+
       tab.classList.add('bg-slate-900', 'text-white', 'border-slate-900');
       tab.classList.remove('bg-white', 'text-slate-900', 'border-slate-300');
-      
+
       STATE.galleryCategory = tab.dataset.category;
       renderGallery();
     });
   });
-  
+
   renderGallery(); // Initial render
 }
 
 function renderGallery() {
   const grid = document.getElementById('gallery-grid');
   if (!grid) return;
-  
+
   // Filter gallery items
   const filtered = GALLERY.filter(item => {
     if (STATE.galleryCategory === 'all') return true;
     return item.category === STATE.galleryCategory;
   });
-  
+
   if (filtered.length === 0) {
     grid.innerHTML = `
       <div class="col-span-full text-center py-20 bg-white rounded border border-dashed border-slate-300">
@@ -339,7 +339,7 @@ function renderGallery() {
     `;
     return;
   }
-  
+
   grid.innerHTML = filtered.map(item => {
     return `
       <div class="relative overflow-hidden aspect-square bg-slate-100 border border-slate-200 cursor-zoom-in rounded-xl group" onclick="openImageModal('${item.src}')">
@@ -356,10 +356,10 @@ function renderGallery() {
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
-  
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const submitBtn = form.querySelector('button[type="submit"]');
     const statusEl = document.getElementById('form-status');
     const originalBtnText = submitBtn.innerHTML;
@@ -384,7 +384,7 @@ function initContactForm() {
         statusEl.classList.add('bg-red-50', 'text-red-700', 'border', 'border-red-200');
       }
     };
-    
+
     // Disable button and show spinner
     submitBtn.disabled = true;
     submitBtn.innerHTML = `
@@ -394,7 +394,7 @@ function initContactForm() {
       </svg>
       Sending Inquiry...
     `;
-    
+
     const formData = new FormData(form);
     const name = String(formData.get('name') || '').trim();
     const phone = String(formData.get('phone') || '').trim();
@@ -489,7 +489,7 @@ function initModals() {
   // Setup close events for details modal and zoom modal
   const prodModal = document.getElementById('details-modal');
   const imgModal = document.getElementById('zoom-modal');
-  
+
   if (prodModal) {
     prodModal.addEventListener('click', (e) => {
       if (e.target === prodModal || e.target.classList.contains('close-btn')) {
@@ -497,7 +497,7 @@ function initModals() {
       }
     });
   }
-  
+
   if (imgModal) {
     imgModal.addEventListener('click', (e) => {
       if (e.target === imgModal || e.target.classList.contains('close-btn')) {
@@ -518,17 +518,17 @@ function initModals() {
 function openProductModal(productId) {
   const p = PRODUCTS.find(prod => prod.id === productId);
   if (!p) return;
-  
+
   STATE.activeProductModal = p;
-  
+
   const modal = document.getElementById('details-modal');
   const modalContent = document.getElementById('details-modal-content');
   if (!modal || !modalContent) return;
-  
-  const featuresBadges = p.features && p.features.map(f => 
+
+  const featuresBadges = p.features && p.features.map(f =>
     `<span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full border border-slate-200">${f}</span>`
   ).join('') || '';
-  
+
   modalContent.innerHTML = `
     <div class="grid md:grid-cols-2 gap-8">
       <div class="relative rounded-xl overflow-hidden bg-slate-100 aspect-[4/3] border border-slate-200">
@@ -551,7 +551,7 @@ function openProductModal(productId) {
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
               <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.262-3.822l.374.222c1.6.952 3.447 1.454 5.337 1.455 5.725 0 10.383-4.66 10.386-10.387.002-2.774-1.077-5.383-3.039-7.348C17.06 2.158 14.45 1.077 11.678 1.077c-5.731 0-10.39 4.66-10.393 10.389-.001 1.957.514 3.868 1.493 5.568l.244.425-1.01 3.693 3.782-.992z"/>
             </svg>
-            Enquiry on WhatsApp
+            Enquiry
           </a>
           <button onclick="closeProductModal()" class="py-3.5 px-6 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold rounded-xl transition-all">
             Close
@@ -560,7 +560,7 @@ function openProductModal(productId) {
       </div>
     </div>
   `;
-  
+
   modal.classList.remove('hidden');
   document.body.style.overflow = 'hidden'; // Lock background scroll
 }
@@ -576,7 +576,7 @@ function openImageModal(imgSrc) {
   STATE.activeImageModal = imgSrc;
   const modal = document.getElementById('zoom-modal');
   const modalImg = document.getElementById('zoom-modal-img');
-  
+
   if (modal && modalImg) {
     modalImg.src = imgSrc;
     modal.classList.remove('hidden');
