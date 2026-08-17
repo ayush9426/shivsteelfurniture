@@ -92,7 +92,7 @@ textarea:focus-visible {
 
 /* Home division cards */
 .division-card {
-  min-height: 520px;
+  min-height: 420px;
   border-radius: 24px;
   border: 1px solid rgba(203, 213, 225, 0.3);
   background: #020617;
@@ -102,13 +102,13 @@ textarea:focus-visible {
 
 @media (min-width: 640px) {
   .division-card {
-    min-height: 580px;
+    min-height: 480px;
   }
 }
 
 @media (min-width: 1024px) {
   .division-card {
-    min-height: 640px;
+    min-height: 520px;
   }
 }
 
