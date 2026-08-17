@@ -619,3 +619,32 @@ window.openProductModal = openProductModal;
 window.closeProductModal = closeProductModal;
 window.openImageModal = openImageModal;
 window.closeImageModal = closeImageModal;
+
+// Mobile-Only Hero Background Swiper Controller (Clean image shuffling in background only)
+let mobileHeroSlideIndex = 0;
+let mobileHeroTimer = null;
+
+function initMobileHeroSwiper() {
+  const slides = document.querySelectorAll('.mobile-slide');
+  if (!slides || slides.length === 0) return;
+
+  if (mobileHeroTimer) clearInterval(mobileHeroTimer);
+  mobileHeroTimer = setInterval(() => {
+    const currentSlides = document.querySelectorAll('.mobile-slide');
+    if (!currentSlides || currentSlides.length === 0) return;
+
+    currentSlides[mobileHeroSlideIndex].classList.remove('opacity-100');
+    currentSlides[mobileHeroSlideIndex].classList.add('opacity-0');
+
+    mobileHeroSlideIndex = (mobileHeroSlideIndex + 1) % currentSlides.length;
+
+    currentSlides[mobileHeroSlideIndex].classList.remove('opacity-0');
+    currentSlides[mobileHeroSlideIndex].classList.add('opacity-100');
+  }, 4000);
+}
+
+// Initialize Mobile Hero Swiper when document is ready
+document.addEventListener('DOMContentLoaded', () => {
+  initMobileHeroSwiper();
+});
+
