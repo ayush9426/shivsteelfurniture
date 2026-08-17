@@ -21,7 +21,7 @@ function copyRecursiveSync(src, dest) {
   }
 }
 
-const itemsToCopy = ['index.html', 'app.js', 'styles.css', 'activate-email.html', 'images'];
+const itemsToCopy = ['index.html', 'app.js', 'styles.css', 'tailwind-output.css', 'activate-email.html', 'images'];
 
 itemsToCopy.forEach(item => {
   copyRecursiveSync(path.join(__dirname, item), path.join(dist, item));

@@ -150,8 +150,7 @@ function switchView(viewName) {
   });
 
   // Mobile menu close on route change
-  const mobileMenu = document.getElementById('mobile-menu');
-  if (mobileMenu) mobileMenu.classList.add('hidden');
+  closeMobileMenu();
 
   if (viewName === 'catalogue') {
     updateCatalogueTabs();
@@ -162,17 +161,51 @@ function switchView(viewName) {
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-// 2. Mobile Menu Controller
-function initMobileMenu() {
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+// 2. Mobile Menu Controller (Right-to-Left Slide Drawer)
+function openMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  if (menu) {
+    menu.classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
 }
+
+function closeMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  if (menu) {
+    menu.classList.remove('active');
+    if (!STATE.activeProductModal && !STATE.activeImageModal) {
+      document.body.style.overflow = '';
+    }
+  }
+}
+
+function initMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const closeBtn = document.getElementById('mobile-menu-close');
+  const backdrop = document.getElementById('mobile-menu-backdrop');
+  const mobileLinks = document.querySelectorAll('#mobile-menu-panel a');
+
+  if (menuBtn) menuBtn.addEventListener('click', openMobileMenu);
+  if (closeBtn) closeBtn.addEventListener('click', closeMobileMenu);
+  if (backdrop) backdrop.addEventListener('click', closeMobileMenu);
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+      const href = link.getAttribute('href');
+      if (href === '#/' || href === '#' || href === '#/home') {
+        if (window.location.hash === '#/' || window.location.hash === '' || window.location.hash === '#/home') {
+          switchView('home');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+}
+
+window.openMobileMenu = openMobileMenu;
+window.closeMobileMenu = closeMobileMenu;
 
 // 3. Catalogue Controller
 function updateCatalogueTabs() {

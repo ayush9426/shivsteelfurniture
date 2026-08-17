@@ -86,38 +86,8 @@
   }
   </script>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Outfit', 'Inter', 'sans-serif'],
-            salega: ['Salega', 'Playfair Display', 'Georgia', 'serif'],
-          },
-          colors: {
-            steel: {
-              50: '#f8fafc',
-              100: '#f1f5f9',
-              200: '#e2e8f0',
-              300: '#cbd5e1',
-              400: '#94a3b8',
-              500: '#64748b',
-              600: '#475569',
-              700: '#334155',
-              800: '#1e293b',
-              900: '#0f172a',
-              950: '#020617',
-            },
-            primary: '#0f172a', // Slate 900
-            secondary: '#64748b', // Slate 500
-            accent: '#2563eb', // Blue 600
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="tailwind-output.css">
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -183,22 +153,44 @@
       </div>
     </div>
 
-    <!-- Mobile Nav Links -->
-    <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 border-b border-slate-900 w-full animate-fade-in">
-      <div class="flex flex-col py-4 px-6 space-y-4">
-        <a href="#/"
-          class="nav-link text-base font-semibold tracking-wide uppercase transition-colors duration-200">Home</a>
-        <a href="#/catalogue"
-          class="nav-link text-base font-semibold tracking-wide uppercase transition-colors duration-200">Catalogue</a>
-        <a href="#/gallery"
-          class="nav-link text-base font-semibold tracking-wide uppercase transition-colors duration-200">Gallery</a>
-        <a href="#/about"
-          class="nav-link text-base font-semibold tracking-wide uppercase transition-colors duration-200">About</a>
-        <a href="#/contact"
-          class="nav-link text-base font-semibold tracking-wide uppercase transition-colors duration-200">Contact</a>
-        <a href="https://wa.me/919426077429" target="_blank" rel="noopener noreferrer"
-          class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-center text-sm font-bold rounded-lg uppercase tracking-wider transition-all block">Chat
-          with Us</a>
+    <!-- Mobile Nav Sidebar (Right-to-Left Slide-Over Panel) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[99999] md:hidden pointer-events-none">
+      <!-- Dark Dim Backdrop Overlay -->
+      <div id="mobile-menu-backdrop" class="fixed inset-0 bg-[#020617] opacity-0 pointer-events-none transition-opacity duration-300" style="background-color: rgba(2, 6, 23, 0.85) !important;"></div>
+
+      <!-- Slide-Over Sidebar Panel (Solid Navy Background, Right-to-Left Slide) -->
+      <div id="mobile-menu-panel" class="fixed top-0 right-0 bottom-0 h-full w-[280px] max-w-[80vw] bg-[#0f172a] border-l border-slate-800 shadow-2xl p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out z-[100000] pointer-events-auto" style="background-color: #0f172a !important; opacity: 1 !important;">
+        <div>
+          <!-- Drawer Header -->
+          <div class="flex items-center justify-between pb-5 mb-6 border-b border-slate-800">
+            <div>
+              <span class="text-base font-black tracking-wider text-white font-salega uppercase block">SHIV STEEL</span>
+              <span class="text-[10px] tracking-widest text-slate-400 uppercase font-mono">FURNITURE</span>
+            </div>
+            <button id="mobile-menu-close" class="p-2 text-slate-400 hover:text-white bg-slate-900 hover:bg-slate-800 rounded-xl transition-colors border border-slate-800" aria-label="Close Navigation Menu">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Vertical Nav Links -->
+          <div class="flex flex-col space-y-2">
+            <a href="#/" class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-white hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Home</a>
+            <a href="#/catalogue" class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Catalogue</a>
+            <a href="#/gallery" class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Gallery</a>
+            <a href="#/about" class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">About</a>
+            <a href="#/contact" class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Contact</a>
+          </div>
+        </div>
+
+        <!-- Drawer Action CTA (Placed higher up right below Contact link) -->
+        <div id="mobile-menu-cta" class="pt-5 border-t border-slate-800">
+          <a href="https://wa.me/919426077429" target="_blank" rel="noopener noreferrer"
+            class="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white text-center text-sm font-bold rounded-xl uppercase tracking-wider transition-all block shadow-lg shadow-blue-600/30">
+            Chat with Us
+          </a>
+        </div>
       </div>
     </div>
   </nav>
