@@ -237,6 +237,26 @@ textarea:focus-visible {
   }
 }
 
+/* Premium Smooth Page Redirection Animations */
+@keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.995);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: pageFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+.view-screen {
+  will-change: opacity, transform;
+}
+
 /* Mobile Navigation Sidebar Drawer Styles - 100% Solid Dark Navy Background */
 #mobile-menu {
   position: fixed !important;
@@ -244,11 +264,13 @@ textarea:focus-visible {
   z-index: 999999 !important;
   pointer-events: none !important;
   visibility: hidden !important;
+  transition: visibility 0.38s ease !important;
 }
 
 #mobile-menu.active {
   pointer-events: auto !important;
   visibility: visible !important;
+  transition: none !important;
 }
 
 #mobile-menu-backdrop {
@@ -259,7 +281,7 @@ textarea:focus-visible {
   -webkit-backdrop-filter: blur(8px) !important;
   opacity: 0 !important;
   pointer-events: none !important;
-  transition: opacity 0.3s ease-in-out !important;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
   z-index: 999998 !important;
 }
 
@@ -272,28 +294,31 @@ textarea:focus-visible {
   position: fixed !important;
   top: 0 !important;
   right: 0 !important;
-  bottom: 0 !important;
-  height: 100vh !important;
+  height: auto !important;
+  max-height: 92vh !important;
   width: 285px !important;
-  max-width: 82vw !important;
+  max-width: 85vw !important;
   background-color: #0f172a !important; /* 100% Solid Dark Slate Navy */
   background-image: none !important;
   color: #ffffff !important;
   box-shadow: none !important; /* NO box shadow when menu is closed */
   border-left: 1px solid #1e293b !important;
+  border-bottom: 1px solid #1e293b !important;
+  border-bottom-left-radius: 1.25rem !important;
   transform: translateX(100%) !important;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.35s ease !important;
   z-index: 999999 !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
-  padding: 1.5rem !important;
+  padding: 1.5rem 1.5rem 1.75rem 1.5rem !important;
+  overflow-y: auto !important;
   pointer-events: auto !important;
 }
 
 #mobile-menu.active #mobile-menu-panel {
   transform: translateX(0) !important;
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7) !important; /* Box shadow ONLY active when menu is open */
+  box-shadow: -10px 15px 45px rgba(0, 0, 0, 0.8) !important; /* Box shadow ONLY active when menu is open */
 }
 
 #mobile-menu-cta {

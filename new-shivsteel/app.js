@@ -125,12 +125,17 @@ function switchView(viewName) {
   STATE.currentView = viewName;
 
   // Hide all view screens
-  document.querySelectorAll('.view-screen').forEach(el => el.classList.add('hidden'));
+  document.querySelectorAll('.view-screen').forEach(el => {
+    el.classList.add('hidden');
+    el.classList.remove('animate-fade-in');
+  });
 
-  // Show active view screen
+  // Show active view screen with smooth redirection transition
   const activeView = document.getElementById(`view-${viewName}`);
   if (activeView) {
     activeView.classList.remove('hidden');
+    void activeView.offsetWidth; // Trigger reflow to restart animation
+    activeView.classList.add('animate-fade-in');
   }
 
   // Update nav link active states
