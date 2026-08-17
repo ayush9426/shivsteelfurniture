@@ -24,7 +24,11 @@ body {
 }
 
 html {
-  scroll-padding-top: 96px;
+  scroll-padding-top: 100px;
+}
+
+section {
+  scroll-margin-top: 100px;
 }
 
 button,
@@ -88,12 +92,24 @@ textarea:focus-visible {
 
 /* Home division cards */
 .division-card {
-  min-height: 380px;
+  min-height: 520px;
   border-radius: 24px;
   border: 1px solid rgba(203, 213, 225, 0.3);
   background: #020617;
   box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.5);
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
+
+@media (min-width: 640px) {
+  .division-card {
+    min-height: 580px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .division-card {
+    min-height: 640px;
+  }
 }
 
 .division-card:hover {
@@ -180,47 +196,6 @@ textarea:focus-visible {
 }
 
 @media (max-width: 640px) {
-  .division-card {
-    min-height: 260px;
-    border-radius: 16px;
-  }
-
-  .division-card-img {
-    width: 58%;
-    left: auto;
-    object-position: center;
-    opacity: 0.96;
-  }
-
-  .division-card-overlay {
-    background:
-      linear-gradient(90deg, rgba(2, 6, 23, 0.94) 0%, rgba(15, 23, 42, 0.88) 48%, rgba(15, 23, 42, 0.32) 100%),
-      linear-gradient(0deg, rgba(2, 6, 23, 0.75) 0%, rgba(2, 6, 23, 0.08) 100%);
-  }
-
-  .division-card-content {
-    padding: 24px 22px;
-    max-width: 70%;
-  }
-
-  .division-card-title {
-    font-size: 1.35rem;
-    margin-bottom: 8px;
-  }
-
-  .division-card-text {
-    font-size: 0.84rem;
-    line-height: 1.55;
-    margin-bottom: 16px;
-  }
-
-  .division-card-cta {
-    min-height: 40px;
-    padding: 0 14px;
-    font-size: 0.78rem;
-    white-space: nowrap;
-  }
-
   .floating-whatsapp {
     right: 1rem;
     bottom: 1rem;
