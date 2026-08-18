@@ -27,7 +27,6 @@ const PRODUCTS = [{ id: "f1", name: "Luxury Steel Swing", category: "furniture",
 
 PRODUCTS.push(
   { id: "f35", name: "Premium Stainless Jula Set", category: "furniture", description: "Heavy stainless steel jula set with smooth finish and comfortable family seating for indoor or covered balcony spaces.", image: "/images/1.jpeg", features: ["Premium Polish", "Heavy Chain", "Family Seating"] },
-  { id: "f36", name: "Designer Double Jula", category: "furniture", description: "Decorative steel swing design with strong frame support and refined detailing for living rooms and verandas.", image: "/images/2.jpeg", features: ["Designer Frame", "Strong Welds", "Indoor Use"] },
   { id: "f37", name: "Outdoor Garden Swing", category: "furniture", description: "Weather-friendly garden swing with a durable steel canopy frame and comfortable seating layout.", image: "/images/10.jpeg", features: ["Outdoor Ready", "Canopy Frame", "Long Life"] },
   { id: "f38", name: "Color Woven Steel Charpai", category: "furniture", description: "Traditional charpai with a powder-coated steel structure and colorful woven base for daily home use.", image: "/images/35.jpeg", features: ["Color Weave", "Fold Friendly", "Strong Base"] },
   { id: "f39", name: "Luxury Blue Sofa Set", category: "furniture", description: "Premium stainless steel sofa set with cushioned seating, polished arms, and a bold modern lounge look.", image: "/images/40.jpeg", features: ["Cushioned", "Mirror Polish", "Living Room"] },
