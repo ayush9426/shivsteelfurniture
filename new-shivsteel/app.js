@@ -36,7 +36,6 @@ PRODUCTS.push(
   { id: "f43", name: "Premium SS Dining Table", category: "furniture", description: "Elegant stainless steel dining table with a polished base and modern tabletop combination.", image: "/images/56.jpeg", features: ["Premium Base", "Modern Dining", "Custom Size"] },
   { id: "f44", name: "Steel Temple Mandir Stand", category: "furniture", description: "Compact stainless steel mandir stand with a neat platform and easy-maintenance polished finish.", image: "/images/65.jpeg", features: ["Mandir Stand", "Compact", "Polished SS"] },
   { id: "f45", name: "Blue Cushion Steel Bed", category: "furniture", description: "Comfortable steel bed design with cushioned surface and a durable frame for long-term use.", image: "/images/67.jpeg", features: ["Cushioned Bed", "Strong Frame", "Daily Use"] },
-  { id: "f46", name: "Corner Steel Sofa Set", category: "furniture", description: "L-shaped steel sofa arrangement built for larger living areas with strong support and premium finishing.", image: "/images/73.jpeg", features: ["L Shape", "Family Seating", "Custom Build"] },
   { id: "r28", name: "Decorative Main Gate", category: "railing", description: "Designer stainless steel main gate with ornamental patterns and a secure heavy-duty frame.", image: "/images/13.jpeg", features: ["Main Gate", "Decorative", "Secure Frame"] },
   { id: "r29", name: "Modern SS Front Gate", category: "railing", description: "Contemporary stainless steel entrance gate with horizontal slats and clean architectural styling.", image: "/images/18.jpeg", features: ["Horizontal Slats", "Modern Look", "Custom Fit"] },
   { id: "r30", name: "SS Window Safety Grill", category: "railing", description: "Strong stainless steel window grill with a clean geometric design for safety and ventilation.", image: "/images/28.jpeg", features: ["Window Grill", "Safety", "Air Flow"] },
@@ -309,6 +308,11 @@ function renderCatalogue() {
       `<span class="text-xs font-semibold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">${f}</span>`
     ).join('') || '';
 
+    const descId = `desc-${p.id}`;
+    const btnId = `desc-btn-${p.id}`;
+    // Show Read More only if description is long enough to be clamped
+    const isLong = p.description.length > 72;
+
     return `
       <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-all duration-300 group">
         <div class="relative overflow-hidden aspect-[4/3] bg-slate-100 cursor-zoom-in" onclick="openImageModal('${p.image}')">
@@ -319,16 +323,20 @@ function renderCatalogue() {
             </svg>
           </div>
         </div>
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">${p.name}</h3>
-          <p class="text-slate-600 text-sm mb-4 line-clamp-2 leading-relaxed flex-grow">${p.description}</p>
-          <div class="flex flex-wrap gap-1.5 mb-6">
+        <div class="p-4 sm:p-6 flex flex-col flex-grow">
+          <h3 class="product-card-title text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors">${p.name.trim()}</h3>
+          <div class="desc-wrapper mb-3 flex-grow">
+            <p id="${descId}" class="product-desc text-slate-600 text-sm leading-relaxed line-clamp-2">${p.description}</p>
+            ${isLong ? `<button id="${btnId}" onclick="toggleDesc('${p.id}')" class="read-more-btn mt-1 text-blue-600 text-xs font-semibold hover:text-blue-800 transition-colors focus:outline-none">Read more ▾</button>` : ''}
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-4">
             ${featuresBadges}
           </div>
           <div class="mt-auto">
-            <a href="https://wa.me/${CONFIG.whatsappSupport.replace('+', '')}?text=Hello%2C%20I%20am%20interested%20in%20your%20product%3A%20${encodeURIComponent(p.name)}%20(ID%3A%20${p.id}).%20Please%20provide%20more%20details." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.262-3.822l.374.222c1.6.952 3.447 1.454 5.337 1.455 5.725 0 10.383-4.66 10.386-10.387.002-2.774-1.077-5.383-3.039-7.348C17.06 2.158 14.45 1.077 11.678 1.077c-5.731 0-10.39 4.66-10.393 10.389-.001 1.957.514 3.868 1.493 5.568l.244.425-1.01 3.693 3.782-.992z"/>
+            <a href="https://wa.me/${CONFIG.whatsappSupport.replace('+', '')}?text=Hello%2C%20I%20am%20interested%20in%20your%20product%3A%20${encodeURIComponent(p.name.trim())}%20(ID%3A%20${p.id}).%20Please%20provide%20more%20details." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 175.216 175.552">
+                <path fill="#fff" d="M87.6 0C39.2 0 0 39.2 0 87.6c0 19.2 6.2 37 16.7 51.5L5.8 175.5l38.2-10.2C57.7 174 72.3 178 87.6 178c48.4 0 87.6-39.2 87.6-87.6S136 0 87.6 0z"/>
+                <path fill="#fff" d="M127.7 107.8c-2-1-11.7-5.8-13.5-6.4-1.8-.7-3.1-1-4.4.9-1.3 2-5 6.4-6.2 7.7-1.1 1.3-2.3 1.5-4.2.5-2-.9-8.4-3.1-16-9.9-5.9-5.3-9.9-11.8-11-13.8-1.2-2-.1-3 .9-4 .9-.9 2-2.4 3-3.6 1-1.2 1.3-2 2-3.3.7-1.3.3-2.5-.2-3.5-.5-1-4.4-10.6-6-14.5-1.6-3.8-3.2-3.3-4.4-3.3h-3.8c-1.3 0-3.4.5-5.2 2.5-1.8 2-6.7 6.5-6.7 15.9 0 9.4 6.8 18.5 7.8 19.7 1 1.3 13.4 20.4 32.4 28.6 4.5 1.9 8.1 3.1 10.8 4 4.5 1.4 8.7 1.2 11.9.8 3.6-.5 11.1-4.5 12.7-8.9 1.6-4.4 1.6-8.1 1.1-8.9-.4-.8-1.7-1.3-3.7-2.3z"/>
               </svg>
               Enquiry
             </a>
@@ -338,6 +346,18 @@ function renderCatalogue() {
     `;
   }).join('');
 }
+
+// Toggle product description expand / collapse
+function toggleDesc(productId) {
+  const desc = document.getElementById(`desc-${productId}`);
+  const btn  = document.getElementById(`desc-btn-${productId}`);
+  if (!desc || !btn) return;
+
+  const expanded = desc.classList.toggle('expanded');
+  desc.classList.toggle('line-clamp-2', !expanded);
+  btn.textContent = expanded ? 'Show less ▴' : 'Read more ▾';
+}
+window.toggleDesc = toggleDesc;
 
 // 4. Gallery Controller
 function initGalleryListeners() {
