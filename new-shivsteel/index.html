@@ -89,7 +89,9 @@
   <!-- ===== GOOGLE FONTS (Outfit & Playfair Display) ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
 
   <!-- Compiled Tailwind CSS -->
   <link rel="stylesheet" href="tailwind-output.css">
@@ -161,10 +163,14 @@
     <!-- Mobile Nav Sidebar (Right-to-Left Slide-Over Panel) -->
     <div id="mobile-menu" class="fixed inset-0 z-[99999] md:hidden pointer-events-none">
       <!-- Dark Dim Backdrop Overlay -->
-      <div id="mobile-menu-backdrop" class="fixed inset-0 bg-[#020617] opacity-0 pointer-events-none transition-opacity duration-300" style="background-color: rgba(2, 6, 23, 0.85) !important;"></div>
+      <div id="mobile-menu-backdrop"
+        class="fixed inset-0 bg-[#020617] opacity-0 pointer-events-none transition-opacity duration-300"
+        style="background-color: rgba(2, 6, 23, 0.85) !important;"></div>
 
       <!-- Slide-Over Sidebar Panel (Auto Height fitting content cleanly) -->
-      <div id="mobile-menu-panel" class="fixed top-0 right-0 w-[285px] max-w-[85vw] bg-[#0f172a] border-l border-b border-slate-800 shadow-2xl p-6 flex flex-col justify-start rounded-bl-2xl translate-x-full transition-transform duration-300 ease-out z-[100000] pointer-events-auto" style="background-color: #0f172a !important; opacity: 1 !important;">
+      <div id="mobile-menu-panel"
+        class="fixed top-0 right-0 w-[285px] max-w-[85vw] bg-[#0f172a] border-l border-b border-slate-800 shadow-2xl p-6 flex flex-col justify-start rounded-bl-2xl translate-x-full transition-transform duration-300 ease-out z-[100000] pointer-events-auto"
+        style="background-color: #0f172a !important; opacity: 1 !important;">
         <div>
           <!-- Drawer Header -->
           <div class="flex items-center justify-between pb-5 mb-6 border-b border-slate-800">
@@ -172,7 +178,9 @@
               <span class="text-base font-black tracking-wider text-white font-salega uppercase block">SHIV STEEL</span>
               <span class="text-[10px] tracking-widest text-slate-400 uppercase font-mono">FURNITURE</span>
             </div>
-            <button id="mobile-menu-close" class="p-2 text-slate-400 hover:text-white bg-slate-900 hover:bg-slate-800 rounded-xl transition-colors border border-slate-800" aria-label="Close Navigation Menu">
+            <button id="mobile-menu-close"
+              class="p-2 text-slate-400 hover:text-white bg-slate-900 hover:bg-slate-800 rounded-xl transition-colors border border-slate-800"
+              aria-label="Close Navigation Menu">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
@@ -181,11 +189,16 @@
 
           <!-- Vertical Nav Links -->
           <div class="flex flex-col space-y-2">
-            <a href="#/" class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-white hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Home</a>
-            <a href="#/catalogue" class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Catalogue</a>
-            <a href="#/gallery" class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Gallery</a>
-            <a href="#/about" class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">About</a>
-            <a href="#/contact" class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Contact</a>
+            <a href="#/"
+              class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-white hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Home</a>
+            <a href="#/catalogue"
+              class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Catalogue</a>
+            <a href="#/gallery"
+              class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Gallery</a>
+            <a href="#/about"
+              class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">About</a>
+            <a href="#/contact"
+              class="mobile-nav-item nav-link text-base font-bold tracking-wider uppercase text-slate-300 hover:text-blue-400 transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-900">Contact</a>
           </div>
         </div>
 
@@ -203,39 +216,55 @@
   <!-- VIEW SCREEN: HOME -->
   <div id="view-home" class="view-screen animate-fade-in bg-slate-950">
     <!-- Hero Section -->
-    <section class="relative bg-slate-950 text-white overflow-hidden min-h-[75vh] flex items-center pt-20 sm:pt-24 pb-10">
+    <section
+      class="relative bg-slate-950 text-white overflow-hidden min-h-[75vh] flex items-center pt-20 sm:pt-24 pb-10">
       <div
         class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/30 via-slate-950 to-slate-950 z-0">
       </div>
-          <!-- Mobile-Only Auto-Swiping Background Images (Hidden on Desktop, No Buttons/Text) -->
-      <div id="mobile-hero-swiper" class="absolute inset-0 z-0 block lg:hidden overflow-hidden pointer-events-none w-full h-full">
-        <div class="mobile-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
-          <img src="images/10.jpeg" alt="Outdoor Garden Swing" class="w-full h-full object-cover object-center opacity-60" />
+      <!-- Mobile-Only Auto-Swiping Background Images (Hidden on Desktop, No Buttons/Text) -->
+      <div id="mobile-hero-swiper"
+        class="absolute inset-0 z-0 block lg:hidden overflow-hidden pointer-events-none w-full h-full">
+        <div
+          class="mobile-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
+          <img src="images/10.jpeg" alt="Outdoor Garden Swing"
+            class="w-full h-full object-cover object-center opacity-60" />
         </div>
-        <div class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
-          <img src="images/r6.jpg" alt="Tinted Glass SS Railing" class="w-full h-full object-cover object-center opacity-60" />
+        <div
+          class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
+          <img src="images/r6.jpg" alt="Tinted Glass SS Railing"
+            class="w-full h-full object-cover object-center opacity-60" />
         </div>
-        <div class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
+        <div
+          class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
           <img src="images/f1.jpg" alt="Steel Swing" class="w-full h-full object-cover object-center opacity-60" />
         </div>
-        <div class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
+        <div
+          class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
           <img src="images/r1.jpg" alt="Glass Railing" class="w-full h-full object-cover object-center opacity-60" />
         </div>
-        <div class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
+        <div
+          class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
           <img src="images/f2.jpg" alt="Modern Sofa" class="w-full h-full object-cover object-center opacity-60" />
         </div>
-        <div class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
+        <div
+          class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
           <img src="images/r2.jpg" alt="Stair Railing" class="w-full h-full object-cover object-center opacity-60" />
         </div>
-        <div class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
-          <img src="images/1.jpeg" alt="Stainless Steel Swing Jula" class="w-full h-full object-cover object-center opacity-60" />
+        <div
+          class="mobile-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center">
+          <img src="images/1.jpeg" alt="Stainless Steel Swing Jula"
+            class="w-full h-full object-cover object-center opacity-60" />
         </div>
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950/35 via-slate-950/55 to-slate-950/85"></div>
       </div>
 
       <!-- Desktop Radial Background Gradient -->
-      <div class="hidden lg:block absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/30 via-slate-950 to-slate-950 z-0 pointer-events-none"></div>
-      <div class="hidden lg:block absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] pointer-events-none z-0"></div>
+      <div
+        class="hidden lg:block absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/30 via-slate-950 to-slate-950 z-0 pointer-events-none">
+      </div>
+      <div
+        class="hidden lg:block absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] pointer-events-none z-0">
+      </div>
 
       <div class="container mx-auto px-4 md:px-6 relative z-10 py-10 text-center lg:text-left">
         <div class="grid lg:grid-cols-12 gap-12 items-center">
@@ -659,7 +688,7 @@
       <div class="container mx-auto px-4 md:px-6">
         <div class="text-center mb-6">
           <h1 class="text-4xl font-extrabold text-slate-900 mb-4">Product Catalogue</h1>
-          <p class="text-slate-600 max-w-md mx-auto">Select a category and use the search bar to browse our premium
+          <p class="text-slate-600 max-w-md mx-auto">Select a category to browse our premium
             steel collections.</p>
         </div>
 
@@ -714,7 +743,7 @@
       <div class="container mx-auto px-4 md:px-6">
         <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
           <div class="flex-1">
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Our Legacy &amp; Dedication</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4"></h2>
             <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-6">
               Shiv Steel Furniture (SSF) was founded with a single mission: to create steel fabrications that serve
               generations. We take pride in building heavy-duty swings (julas), designer sofas, premium double beds, and
@@ -895,11 +924,14 @@
                   </svg>
                 </div>
                 <div class="min-w-0 pt-0.5">
-                  <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">Workshop Address</span>
+                  <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">Workshop
+                    Address</span>
                   <a href="https://www.google.com/maps/place/Shiv+steel+furniture/@23.0278479,72.6391343,642m/data=!3m2!1e3!4b1!4m6!3m5!1s0x395e8700149e6787:0xedd44cdec8498eff!8m2!3d23.0278479!4d72.6391343!16s%2Fg%2F11wtc2n1t7?entry=ttu&amp;g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank" rel="noopener noreferrer"
-                    class="text-slate-700 text-sm font-semibold leading-relaxed hover:text-blue-600 block" data-map-link>
-                    <span data-config="address">Shop no: 6-7-8, Parvati Nagar Shopping Center, Viratnagar, Ahmedabad, Gujarat-382415</span>
+                    class="text-slate-700 text-sm font-semibold leading-relaxed hover:text-blue-600 block"
+                    data-map-link>
+                    <span data-config="address">Shop no: 6-7-8, Parvati Nagar Shopping Center, Viratnagar, Ahmedabad,
+                      Gujarat-382415</span>
                   </a>
                 </div>
               </div>
@@ -916,9 +948,11 @@
                   </svg>
                 </div>
                 <div class="min-w-0 pt-0.5">
-                  <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">Email Inquiry</span>
+                  <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">Email
+                    Inquiry</span>
                   <a href="mailto:infoshivsteelfurniture@gmail.com"
-                    class="text-slate-700 text-sm font-semibold hover:text-blue-600 block break-all" data-config="email">
+                    class="text-slate-700 text-sm font-semibold hover:text-blue-600 block break-all"
+                    data-config="email">
                     infoshivsteelfurniture@gmail.com
                   </a>
                 </div>
@@ -1109,15 +1143,18 @@
     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 175.216 175.552">
       <defs>
         <linearGradient id="wa-grad" x1="85.915%" x2="14.084%" y1="14.084%" y2="85.916%">
-          <stop offset="0%" stop-color="#57d163"/>
-          <stop offset="100%" stop-color="#23b33a"/>
+          <stop offset="0%" stop-color="#57d163" />
+          <stop offset="100%" stop-color="#23b33a" />
         </linearGradient>
       </defs>
-      <path fill="url(#wa-grad)" d="M87.6 0C39.2 0 0 39.2 0 87.6c0 19.2 6.2 37 16.7 51.5L5.8 175.5l38.2-10.2C57.7 174 72.3 178 87.6 178c48.4 0 87.6-39.2 87.6-87.6S136 0 87.6 0z"/>
-      <path fill="#fff" d="M127.7 107.8c-2-1-11.7-5.8-13.5-6.4-1.8-.7-3.1-1-4.4.9-1.3 2-5 6.4-6.2 7.7-1.1 1.3-2.3 1.5-4.2.5-2-.9-8.4-3.1-16-9.9-5.9-5.3-9.9-11.8-11-13.8-1.2-2-.1-3 .9-4 .9-.9 2-2.4 3-3.6 1-1.2 1.3-2 2-3.3.7-1.3.3-2.5-.2-3.5-.5-1-4.4-10.6-6-14.5-1.6-3.8-3.2-3.3-4.4-3.3h-3.8c-1.3 0-3.4.5-5.2 2.5-1.8 2-6.7 6.5-6.7 15.9 0 9.4 6.8 18.5 7.8 19.7 1 1.3 13.4 20.4 32.4 28.6 4.5 1.9 8.1 3.1 10.8 4 4.5 1.4 8.7 1.2 11.9.8 3.6-.5 11.1-4.5 12.7-8.9 1.6-4.4 1.6-8.1 1.1-8.9-.4-.8-1.7-1.3-3.7-2.3z"/>
+      <path fill="url(#wa-grad)"
+        d="M87.6 0C39.2 0 0 39.2 0 87.6c0 19.2 6.2 37 16.7 51.5L5.8 175.5l38.2-10.2C57.7 174 72.3 178 87.6 178c48.4 0 87.6-39.2 87.6-87.6S136 0 87.6 0z" />
+      <path fill="#fff"
+        d="M127.7 107.8c-2-1-11.7-5.8-13.5-6.4-1.8-.7-3.1-1-4.4.9-1.3 2-5 6.4-6.2 7.7-1.1 1.3-2.3 1.5-4.2.5-2-.9-8.4-3.1-16-9.9-5.9-5.3-9.9-11.8-11-13.8-1.2-2-.1-3 .9-4 .9-.9 2-2.4 3-3.6 1-1.2 1.3-2 2-3.3.7-1.3.3-2.5-.2-3.5-.5-1-4.4-10.6-6-14.5-1.6-3.8-3.2-3.3-4.4-3.3h-3.8c-1.3 0-3.4.5-5.2 2.5-1.8 2-6.7 6.5-6.7 15.9 0 9.4 6.8 18.5 7.8 19.7 1 1.3 13.4 20.4 32.4 28.6 4.5 1.9 8.1 3.1 10.8 4 4.5 1.4 8.7 1.2 11.9.8 3.6-.5 11.1-4.5 12.7-8.9 1.6-4.4 1.6-8.1 1.1-8.9-.4-.8-1.7-1.3-3.7-2.3z" />
     </svg>
     <span
-      class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-300 text-sm font-extrabold tracking-wide uppercase whitespace-nowrap text-emerald-600">WhatsApp Us</span>
+      class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-300 text-sm font-extrabold tracking-wide uppercase whitespace-nowrap text-emerald-600">WhatsApp
+      Us</span>
   </a>
 
 
